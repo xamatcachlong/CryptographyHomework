@@ -27,7 +27,7 @@ export default class EllipticCurve{
             x += 1n;
             y = await this.findSquareRootQuadraticResidue(x ** 3n + this.a * x + this.b, this.p);
         } while (y.length === 0);
-        return new Point(x, y[0], this);
+        return new Point(x, y[1], this);
     }
 
     public async findSquareRootQuadraticResidue(n: bigint, p: Prime): Promise<bigint[]>{
@@ -164,6 +164,7 @@ export class ElGamal extends EllipticCurve{
     }
 
     public async encrypt(k: bigint, M: bigint, Key: PublicKey): Promise<[Point, bigint]>{
+
         const C1 = Key.G.mul(k);
         const S: bigint = BigInt(parseInt(SHA256(Key.H.mul(k).toString()).toString(), 16));
         const C2 = (S + M) % Key.G.p;

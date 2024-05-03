@@ -22,7 +22,7 @@ class EllipticCurve {
             x += 1n;
             y = await this.findSquareRootQuadraticResidue(x ** 3n + this.a * x + this.b, this.p);
         } while (y.length === 0);
-        return new Point(x, y[0], this);
+        return new Point(x, y[1], this);
     }
     async findSquareRootQuadraticResidue(n, p) {
         n = n % p;
