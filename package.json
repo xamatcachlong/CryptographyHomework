@@ -1,0 +1,33 @@
+{
+  "name": "cryptographyhomework",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "tsc && node ./dist/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xamatcachlong/cryptographyhomework.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xamatcachlong/cryptographyhomework/issues"
+  },
+  "homepage": "https://github.com/xamatcachlong/cryptographyhomework#readme",
+  "dependencies": {
+    "@types/crypto-js": "^4.2.2",
+    "crypto-js": "^4.2.0",
+    "mathjs": "^12.4.2",
+    "tsc": "^2.0.4",
+    "tslint": "^6.1.3",
+    "typescript": "^5.4.5"
+  },
+  "files": [
+    "./bin/*",
+    "./lib/*"
+  ],
+  "typings": "./lib/index.d.ts"
+}
